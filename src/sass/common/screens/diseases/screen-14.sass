@@ -1,0 +1,145 @@
+.screen-14
+  &__authors
+    @media (min-width: 767px)
+      display: flex
+      gap: 40px
+  &__photo
+    width: 80px
+    min-width: 80px
+    height: 80px
+    border-radius: 50%
+    overflow: hidden
+    margin: 0 auto 8px
+    @media (min-width: 991px)
+      margin: 0
+      width: 140px
+      min-width: 140px
+      height: 140px
+    & img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__row
+    margin-bottom: 24px
+    @media (min-width: 1280px)
+      display: flex
+      gap: 40px
+      margin-bottom: 40px
+  &__share
+    display: flex
+    justify-content: center
+    padding: 8px 24px
+    @media (min-width: 1280px)
+      padding: 8px 24px
+    @media (min-width: 1490px)
+      padding: 8px 40px
+  &__link
+    @media (min-width: 1280px)
+      & img
+        width: 48px
+        min-width: 48px
+        height: 48px
+  &__author, &__share, &__rating
+    +block-sh-1
+  &__rating
+    display: flex
+    flex-direction: column
+    gap: 12px
+    padding: 16px 24px
+    margin-bottom: 8px
+    @media (min-width: 1280px)
+      width: 100%
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      padding: 8px 24px
+      margin-bottom: 0
+    @media (min-width: 1490px)
+      padding: 8px 40px
+  &__item
+    color: var(--black-text)
+  &__author
+    padding: 8px 16px
+    text-align: center
+    margin-bottom: 8px
+    @media (min-width: 767px)
+      width: 100%
+      margin-bottom: 0
+    @media (min-width: 991px)
+      padding: 16px 24px
+      display: flex
+      gap: 24px
+      text-align: left
+    &:last-child
+      margin-bottom: 0
+  &__status
+    color: var(--primary)
+    font-size: 17px
+    line-height: 22px
+    margin-bottom: 4px
+    @media (min-width: 991px)
+      margin-bottom: 8px
+  &__name
+    margin-bottom: 4px
+    @media (min-width: 991px)
+      font-size: 24px
+      line-height: 32px
+      margin-bottom: 8px
+  &__about
+    font-size: 17px
+    line-height: 22px
+  &__info
+    @media (min-width: 991px)
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+.stars
+  display: flex
+  gap: 2px
+
+.post-ratings
+  display: flex
+  align-items: center
+  & img
+    min-width: 32px
+    width: 32px
+    height: 32px
+    margin-right: 2px
+    &:last-child
+      margin-right: 16px
+
+.ya-share2__badge
+  border-radius: 0!important
+
+.ya-share2__container_size_l .ya-share2__badge .ya-share2__icon
+  width: 32px!important
+  height: 32px!important
+  background-size: cover!important
+  @media (min-width: 1280px)
+    width: 48px!important
+    height: 48px!important
+
+.ya-share2__item_service_vkontakte .ya-share2__icon
+  background-image: url(../img/svg/vk.svg)!important
+
+.ya-share2__item_service_odnoklassniki .ya-share2__icon
+  background-image: url(../img/svg/ok.svg)!important
+
+.ya-share2__item_service_telegram .ya-share2__icon
+  background-image: url(../img/svg/telegram.svg)!important
+
+.ya-share2__item_service_whatsapp .ya-share2__icon
+  background-image: url(../img/svg/whatsapp.svg)!important
+
+.ya-share2__list.ya-share2__list_direction_horizontal > .ya-share2__item
+  margin: 0!important
+
+.ya-share2__badge
+  background-color: transparent!important
+
+.ya-share2__list.ya-share2__list_direction_horizontal
+  display: flex!important
+  gap: 24px
+  @media (min-width: 1280px)
+    gap: 40px

@@ -1,0 +1,64 @@
+.screen-7
+  & .title-h2
+    margin-bottom: 24px
+  &__left
+    @media (min-width: 991px)
+      width: 100%
+      max-width: 820px
+  &__right
+    display: none
+    @media (min-width: 991px)
+      display: flex
+      align-items: flex-end
+      padding-top: 54px
+  &__row
+    @media (min-width: 991px)
+      display: flex
+      align-items: flex-start
+      gap: 40px
+
+.details-open .summary-inner
+  max-height: 0
+  transition: var(--ts)
+  overflow: hidden
+
+.details-open .summary-open .summary-inner
+  max-height: 100%
+  transition: var(--ts)
+
+.details
+  padding: 9px 16px
+  border-radius: 12px
+  background: #FFF
+  box-shadow: $box-shadow
+  margin-bottom: 16px
+  overflow: hidden
+  transition: var(--ts)
+  &:last-child
+    margin-bottom: 0
+  &.active
+    & .summary__text
+      color: var(--primary)
+      font-weight: 700
+      transition: var(--ts)
+    & .summary__icon
+      background: url(../img/svg/spoiler-close.svg)
+      transition: var(--ts)
+    & .summary-inner
+      margin-top: 10px
+      margin-bottom: 0!important
+
+.summary
+  display: flex
+  justify-content: space-between
+  cursor: pointer
+  &__icon
+    width: 24px
+    min-width: 24px
+    height: 24px
+    +bg
+    background: url(../img/svg/spoiler-open.svg)
+    display: block
+    margin-left: 8px
+  &-inner
+    color: var(--grayscale)

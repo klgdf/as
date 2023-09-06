@@ -1,0 +1,434 @@
+.header
+  padding: 17px 0 7px
+  background: #FFF
+  box-shadow: 0px 2px 8px 0px rgba(32, 61, 165, 0.15)
+  transition: var(--ts)
+  @media (min-width: 1280px)
+    padding: 20px 0 16px
+  &.active
+    position: fixed
+    width: 100%
+    top: 0
+    right: 0
+    left: 0
+    z-index: 50
+  & .btn
+    @media (min-width: 1280px) and (max-width: 1490px)
+      padding: 14px 24px
+  &__row
+    display: flex
+    justify-content: space-between
+    @media (min-width: 1280px)
+      gap: 40px
+  &__nav
+    display: flex
+    flex-direction: column
+    position: fixed
+    overflow-y: auto
+    padding: 24px
+    top: 63.64px
+    bottom: 0
+    right: 0
+    left: 0
+    background: #fff
+    z-index: 10
+    @media (min-width: 767px)
+      padding-left: calc((100% - 738px) / 2 + 15px)
+      padding-right: calc((100% - 738px) / 2 + 15px)
+    @media (min-width: 991px)
+      padding-left: calc((100% - 962px) / 2 + 15px)
+      padding-right: calc((100% - 962px) / 2 + 15px)
+    @media (min-width: 1280px)
+      position: unset
+      overflow: unset
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      gap: 60px
+      padding: 0
+      width: 100%
+    &.hidden
+      @media (min-width: 1280px)
+        display: flex!important
+    &:not(.hidden)
+      & ~ .header__mob
+        & .header__search, & .header__phone
+          visibility: hidden
+          opacity: 0
+  &__contact
+    order: 1
+    margin-bottom: 40px
+    @media (min-width: 1280px)
+      order: 2
+      margin-bottom: 0
+    & .btn
+      width: max-content
+  &__center
+    display: flex
+    flex-direction: column
+    width: 100%
+    order: 2
+    @media (min-width: 1280px)
+      order: 1
+  &__info
+    order: 2
+    @media (min-width: 1280px)
+      order: 1
+  &__menu
+    order: 1
+    margin-bottom: 40px
+    @media (min-width: 1280px)
+      order: 2
+      margin-bottom: 0
+  &__info
+    @media (min-width: 1280px)
+      display: flex
+      align-items: center
+      gap: 60px
+      margin-bottom: 19px
+  &__city
+    display: flex
+    align-items: center
+    gap: 4px
+    font-size: 17px
+    font-weight: 700
+    line-height: 22px
+    margin-bottom: 12px
+    cursor: pointer
+    @media (min-width: 1280px)
+      margin-bottom: 0
+  &__call
+    display: flex
+    gap: 16px
+    margin-bottom: 20px
+    padding-right: 20px
+    @media (min-width: 1280px)
+      justify-content: flex-end
+    @media (min-width: 1490px)
+      gap: 24px
+  &__time
+    color: var(--secondary)
+    font-size: 20px
+    font-weight: 700
+    line-height: 24px
+  &__phone
+    display: flex
+    align-items: center
+    gap: 4px
+    transition: var(--ts)
+    &--mob
+      & span
+        display: none
+    &:hover
+      color: var(--secondary)
+  &__menu
+    & .menu
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      gap: 24px
+      margin-bottom: 0
+      @media (min-width: 1280px)
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+      @media (min-width: 1490px)
+        flex-wrap: nowrap
+      & .menu-item-has-children
+        & > a
+          display: flex
+          gap: 4px
+          width: 100%
+          justify-content: space-between
+      & .sub-menu
+        @media (min-width: 1280px)
+          position: absolute
+          visibility: hidden
+          opacity: 0
+          z-index: 1
+          display: block
+          height: unset
+        & .menu-item
+          font-weight: 400
+          margin-bottom: 8px
+          &:last-child
+            margin-bottom: 0
+      & .menu-item
+        position: relative
+        display: flex
+        width: 100%
+        cursor: pointer
+        transition: var(--ts)
+        @media (min-width: 1280px)
+          width: auto
+          align-items: center
+      & > .menu-item
+        font-weight: 700
+        @media (min-width: 1280px)
+          font-weight: 400
+      & > .menu-item-has-children
+        flex-direction: column
+        @media (min-width: 1280px)
+          flex-direction: row
+        & > .toggle-button
+          background-image: url(../img/svg/arrow-mobile.svg)
+          transform: rotate(-90deg)
+          &.active
+            transform: rotate(0)
+        & > a::after
+          @media (min-width: 1280px)
+            content: ''
+            display: block
+            width: 24px
+            height: 24px
+            background: url(../img/svg/arrow-mobile.svg)
+        & > .sub-menu
+          transition: var(--ts)
+          @media (min-width: 1280px)
+            background: #fff
+            padding: 24px 40px
+            width: max-content
+            left: -24px
+            top: 40px
+            border-radius: 24px
+            box-shadow: $box-shadow-block
+            z-index: 110
+        .col2
+          li::before
+            content: ""
+            display: block
+            border-radius: 50%
+            width: 6px
+            height: 6px
+            background: var(--secondary)
+            margin: 9px
+          a
+            display: flex
+            align-items: center
+            justify-content: flex-start
+          &:not(:empty)
+            border-left: 1px solid #D9DBE9
+            padding-left: 20px
+            margin-left: 20px
+        &:hover > .sub-menu
+          @media (min-width: 1280px)
+            visibility: visible
+            opacity: 1
+  &__location, &__top
+    @media (min-width: 1280px)
+      display: flex
+      align-items: center
+  &__location
+    @media (min-width: 1280px)
+      position: relative
+      gap: 60px
+  &__top
+    @media (min-width: 1280px)
+      position: relative
+      width: 100%
+      justify-content: space-between
+  &__search
+    display: none
+    gap: 20px
+    @media (min-width: 1280px)
+      position: absolute
+      right: 0
+      display: flex
+      gap: 20px
+      padding: 10px 16px
+      border-radius: 12px
+      background: #FFF
+      box-shadow: $box-shadow
+      transition: var(--ts)
+      cursor: pointer
+    &-input,&-submit
+      display: none
+      outline: none !important
+    & .is-search-form
+      display: none
+    &.active .is-search-input
+      border: 0 !important
+      padding: 0
+      font-size: 16px !important
+    &.active .is-search-form
+      position: unset !important
+      display: flex !important
+      width: 100% !important
+    &.active
+      left: 0
+    &.active label
+      display: flex
+      width: 100%
+    &.active .is-search-submit
+      position: absolute
+      left: 0
+      top: 0
+      bottom: 0
+      display: flex
+      width: 30px
+      height: 100%
+      opacity: 0
+      @media (min-width: 1280px)
+        width: 54px
+    &--mob
+      display: flex
+      &.active
+        position: relative
+        width: 100%
+  &__mob
+    display: flex
+    align-items: center
+    gap: 16px
+    &.active
+      width: 100%
+    @media (min-width: 1280px)
+      display: none
+  &__address
+    font-size: 17px
+    line-height: 22px
+    @media (min-width: 1280px)
+      max-width: 320px
+    @media (min-width: 1490px)
+      max-width: auto
+  &__logo
+    max-width: 182px
+    @media (min-width: 1280px)
+      max-width: 220px
+    @media (min-width: 1490px)
+      max-width: 302px
+    &--desktop
+      display: none
+      @media (min-width: 1280px)
+        display: block
+        margin-left: -6px
+    &--mobile
+      display: block
+      @media (min-width: 1280px)
+        display: none
+  &__burger
+    display: block
+    width: 24px
+    height: 24px
+    +bg
+    background: url(../img/svg/menu-burger.svg)
+    transition: var(--ts)
+    &.active
+      background: url(../img/svg/close.svg)
+
+//меню для цены
+.mega-menu
+  & > .sub-menu
+    & > ul > .menu-item
+      & > a
+        display: flex
+        justify-content: space-between
+
+        &::after
+          @media (min-width: 1280px)
+            content: ''
+            display: block
+            width: 24px
+            height: 24px
+    & > ul > .menu-item-has-children
+      position: unset!important
+      flex-direction: column
+      gap: 0
+      @media (min-width: 1280px)
+        gap: 8px
+      & .toggle-button
+        background-image: url(../img/svg/chevron-right.svg)
+        &.active
+          transform: rotate(-90deg)
+          background-image: url(../img/svg/chevron-right-active.svg)
+      &:hover
+        color: var(--secondary)
+        & > a::after
+          @media (min-width: 1280px)
+            background: url(../img/svg/chevron-right-active.svg)
+        & > .sub-menu
+          @media (min-width: 1280px)
+            visibility: visible
+            opacity: 1
+      & > a::after
+        @media (min-width: 1280px)
+          content: ''
+          display: block
+          width: 24px
+          height: 24px
+          background: url(../img/svg/chevron-right.svg)
+          +bg
+      & > .sub-menu
+        background: #fff
+        color: var(--text)
+        z-index: -1
+        &.active
+          margin-top: 8px
+        @media (min-width: 1280px)
+          top: 0
+          right: calc(-100% - 54px)
+          padding: 24px 24px 24px 48px
+          border-radius: 0 24px 24px 0
+          height: 100%
+          &::before
+            content: ''
+            position: absolute
+            left: 24px
+            top: 24px
+            width: 1px
+            height: calc( 100% - 48px )
+            display: block
+            background: var(--border-line)
+
+.mega-menu .sub-menu.fix .sub-menu > .menu-item, .menu > .menu-item-has-children:not(.mega-menu) > .sub-menu > .menu-item
+  &:hover
+    color: var(--secondary)
+  &::before
+    content: ''
+    display: block
+    border-radius: 50%
+    min-width: 6px
+    width: 6px
+    height: 6px
+    background: var(--secondary)
+    margin: 9px
+
+.menu-item-has-children .sub-menu
+  position: unset
+  height: 0
+  opacity: 0
+  visibility: hidden
+  overflow: hidden
+  padding: 0
+  transition: var(--ts)
+  &.active
+    box-shadow: none
+    width: unset
+    height: auto
+    opacity: 1
+    visibility: visible
+    margin-top: 8px
+    transition: var(--ts)
+
+.toggle-button
+  position: absolute
+  right: 0
+  width: 24px
+  height: 24px
+  +bg
+  transition: var(--ts)
+  cursor: pointer
+  @media (min-width: 1280px)
+    display: none
+
+.toggle-button.active + .sub-menu.fix
+  height: auto
+  opacity: 1
+  visibility: visible
+  margin-top: 8px
+
+.mega-menu>.sub-menu>ul>.menu-item-has-children.active > a
+  color: var(--secondary)
+
+.mega-menu>.sub-menu>ul>.menu-item-has-children:hover>a::after,
+.mega-menu>.sub-menu>ul>.menu-item-has-children.active>a::after
+  background: url(../img/svg/chevron-right-active.svg)

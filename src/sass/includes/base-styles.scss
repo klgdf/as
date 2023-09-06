@@ -1,0 +1,171 @@
+@mixin base-styles {
+
+  label,
+  [onclick] {
+    -webkit-appearance: button;
+    cursor: pointer;
+  }
+
+  a,
+  .a,
+  a:before,
+  .a:before,
+  a:after,
+  .a:after,
+  label {
+    transition: var(--ts);
+  }
+
+  a:hover {
+    text-decoration: none !important;
+  }
+
+  a:active,
+  a:focus {
+    color: inherit;
+  }
+
+  .wrapper {
+    position: relative;
+  }
+
+}
+
+// Fix footer if content is empty
+@mixin fix-footer() {
+  .wrapper.fix-footer {
+    min-height: 100vh;
+
+    & .footer {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+@mixin spread() {
+  .spread {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 100% !important;
+    height: 100% !important;
+
+    &-before:before,
+    &-after:after {
+      content: "";
+      @extend .spread;
+    }
+  }
+}
+
+@mixin video-box() {
+  .video-box.spread {
+    overflow: hidden;
+  }
+
+  .video-box.spread * {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 16 / 9 * 100vh;
+    min-width: 100%;
+    min-height: 9 / 16 * 100vw;
+  }
+}
+
+@mixin anchor($top: -90px) {
+  .anchor {
+    position: absolute;
+    top: $top;
+  }
+}
+
+@mixin circle() {
+  .circle {
+    border-radius: 999px;
+  }
+}
+
+@mixin overflow-hidden() {
+  .overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+@mixin visibility-hidden() {
+  .visibility-hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@mixin modal() {
+  .overlay {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.7);
+    transition: 0.4s;
+
+    &.hidden {
+      z-index: -1;
+      display: inherit;
+      visibility: hidden;
+      opacity: 0;
+      display: flex !important;
+    }
+  }
+
+  .overflow {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+
+    &__box {
+      position: relative;
+      z-index: 1;
+      margin: auto;
+      overflow: hidden;
+
+      &_close {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url(../img/svg/close-red.svg) center no-repeat;
+        background-size: 100%;
+        cursor: pointer;
+      }
+    }
+
+    &__close {
+      cursor: pointer;
+      position: fixed;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+  }
+}

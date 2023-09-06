@@ -1,0 +1,191 @@
+.footer
+  background: #FFF
+  box-shadow: 0px -2px 8px 0px rgba(32, 61, 165, 0.15)
+  padding: 24px 0
+  &__row
+    margin-bottom: 40px
+    @media (min-width: 1280px)
+      display: flex
+      justify-content: space-between
+      gap: 100px
+  &__info
+    @media (min-width: 1280px)
+      display: flex
+      justify-content: space-between
+  &__line
+    display: flex
+    align-items: center
+    gap: 8px
+    color: var(--light-black)
+    font-size: 20px
+    line-height: 26px
+  &__callback
+    color: var(--primary)
+    font-size: 20px
+    font-weight: 700
+    line-height: 24px
+    margin-bottom: 20px
+  &__address
+    gap: 12px
+    & span
+      max-width: 280px
+  &__number
+    margin-bottom: 16px
+  &__text
+    font-size: 24px
+    line-height: 28px
+    margin-bottom: 8px
+  &__cell
+    margin-bottom: 24px
+    &:last-child
+      margin-bottom: 0
+  &__summary
+    display: flex
+    color: var(--primary)
+    font-weight: 700
+    line-height: 24px
+  &__col
+    margin-bottom: 40px
+  &__logo
+    max-width: 183px
+    margin-bottom: 25px
+  &__column
+    margin-bottom: 24px
+    @media (min-width: 991px)
+      margin-bottom: 0
+    @media (min-width: 1280px)
+      padding: 0 40px 0 24px
+    &:last-child
+      margin-bottom: 0
+    &-3
+      & .footer-menu
+        display: flex
+        flex-wrap: wrap
+        gap: 16px 24px
+        @media (min-width: 991px)
+          display: block
+  &__left
+    margin-bottom: 24px
+    @media (min-width: 991px)
+      display: flex
+      gap: 80px
+      margin-bottom: 40px
+    @media (min-width: 1280px)
+      margin-bottom: 0
+  &__right
+    @media (min-width: 991px)
+      display: flex
+      gap: 80px
+    @media (min-width: 1280px)
+      display: block
+  &__content
+    @media (min-width: 991px)
+      display: flex
+      gap: 32px
+  &__summary
+    & svg
+      @media (min-width: 1280px)
+        display: none
+  &__copy
+    border-top: 1px solid var(--border-line)
+    padding-top: 24px
+    @media (min-width: 991px)
+      padding-top: 16px
+  &__about
+    color: var(--gray-text)
+    font-size: 17px
+    font-weight: 400
+    line-height: 22px
+    margin-bottom: 16px
+    @media (min-width: 991px)
+      margin-bottom: 40px
+    & p
+      margin-bottom: 24px
+      &:last-child
+        margin-bottom: 0
+  &__copyright
+    text-align: center
+    @media (min-width: 991px)
+      display: flex
+      justify-content: space-between
+      text-align: left
+  &__rights
+    color: var(--inactive-breadcrumbs)
+    font-family: Inter
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    margin-bottom: 8px
+    @media (min-width: 991px)
+      order: 2
+      margin-bottom: 0
+  &__warning
+    color: var(--warning)
+    font-size: 24px
+    line-height: 28px
+    @media (min-width: 991px)
+      order: 1
+  &__health
+    display: flex
+    gap: 16px
+    font-size: 17px
+    line-height: 22px
+    &--text
+      color: var(--black-text)
+      max-width: 216px
+      margin-bottom: 8px
+    &--link
+      font-weight: 700
+      color: var(--active-breadcrumbs)
+      @media (min-width: 1280px)
+        font-weight: 400
+        font-size: 20px
+        line-height: 26px
+
+.footer-menu
+  margin-bottom: 0
+  & .sub-menu
+    color: var(--text)
+    font-size: 17px
+    font-weight: 400
+    line-height: 22px
+    width: 0
+    @media (min-width: 991px)
+      width: 100%
+      height: 100%
+      visibility: visible
+      opacity: 1
+      margin-top: 16px
+    &.active
+      margin-top: 8px
+      @media (min-width: 991px)
+        margin-top: 0
+    & .menu-item
+      margin-bottom: 8px
+      & .toggle-button
+        transform: rotate(-90deg)
+        &.active
+          transform: rotate(0)
+      &:last-child
+        margin-bottom: 0
+  & > .menu-item
+    width: max-content
+    color: var(--primary)
+    font-weight: 700
+    line-height: 24px
+    @media (min-width: 991px)
+      margin-bottom: 16px
+      &:last-child
+        margin-bottom: 0
+    & .toggle-button
+      &.active
+        transform: rotate(180deg)
+  & .menu-item-has-children
+    width: 100%
+  & .menu-item
+    position: relative
+    & .toggle-button
+      background-image: url(../img/svg/arrow-footer.svg)
+      top: 0
+      @media (min-width: 991px)
+        display: none

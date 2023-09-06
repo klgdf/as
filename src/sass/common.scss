@@ -1,0 +1,67 @@
+/* BEGIN GENERAL */
+// @import "includes/base-functions-colors.scss";
+@import "project-vars.scss";
+/* END GENERAL */
+
+/* BEGIN FUNCTIONS */
+// @import "includes/base-functions.scss";
+/* END FUNCTIONS */
+
+/* BEGIN VENDORS */
+@import "vendors.scss";
+/* END VENDORS */
+
+/* BEGIN FONTS */
+@import "fonts.scss";
+/* END FONTS */
+
+/* BEGIN MIXINS */
+@import "common/mixins.sass";
+/* END MIXINS */
+
+/* BEGIN STYLES */
+@import "common/components/header.sass";
+@import "common/components/footer.sass";
+
+//components
+@import "common/components/pagination.sass";
+@import "common/components/search.sass";
+@import "common/components/breadcrumbs.sass";
+@import "common/components/button-link.sass";
+@import "common/components/modals.sass";
+@import "common/components/form.sass";
+
+//blocks
+@import "common/blocks/doctors.sass";
+@import "common/blocks/appointment.sass";
+@import "common/blocks/reviews.sass";
+@import "common/blocks/article-preview.sass";
+
+@import "common/screens/services/screen-1.sass";
+@import "common/screens/services/screen-2.sass";
+@import "common/screens/services/screen-3.sass";
+@import "common/screens/services/screen-4.sass";
+@import "common/screens/services/screen-5.sass";
+@import "common/screens/services/screen-7.sass";
+@import "common/screens/services/screen-8.sass";
+@import "common/screens/services/screen-9.sass";
+@import "common/screens/services/screen-10.sass";
+@import "common/screens/services/screen-11.sass";
+@import "common/screens/diseases/screen-12.sass";
+@import "common/screens/diseases/screen-13.sass";
+@import "common/screens/diseases/screen-14.sass";
+@import "common/screens/diseases/screen-15.sass";
+@import "common/screens/doctors/screen-16.sass";
+@import "common/screens/doctors/screen-17.sass";
+@import "common/screens/doctors/screen-18.sass";
+@import "common/screens/doctors/screen-24.sass";
+@import "common/screens/vacancies/vacancy.sass";
+@import "common/screens/vacancies/screen-19.sass";
+@import "common/screens/vacancies/screen-20.sass";
+@import "common/screens/contacts/screen-21.sass";
+@import "common/screens/contacts/screen-22.sass";
+@import "common/screens/contacts/screen-23.sass";
+@import "common/screens/licenses.sass";
+@import "common/screens/news.sass";
+@import "common/excludes.sass";
+/* END STYLES */

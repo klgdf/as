@@ -1,0 +1,88 @@
+.screen-22
+  & #map
+    margin-bottom: 24px
+    @media (min-width: 991px)
+      margin-bottom: 40px
+  &__row
+    @media (min-width: 991px)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 60px
+  &__item
+    margin-bottom: 24px
+    @media (min-width: 991px)
+      margin-bottom: 0
+    &:last-child
+      margin-bottom: 0
+  &__summary, &__place
+    display: flex
+    align-items: flex-start
+    gap: 8px
+  &__summary
+    color: var(--primary)
+    font-size: 20px
+    font-weight: 700
+    line-height: 24px
+  &__info
+    margin-left: 32px
+    &.active
+      & .screen-22__summary
+        margin-bottom: 8px
+        @media (min-width: 991px)
+          margin-bottom: 24px
+  &__content
+    font-size: 17px
+    line-height: 22px
+    +block-sh-2
+    margin-bottom: 0!important
+    & div
+      padding: 16px 16px 16px 8px
+  &__place
+    margin-bottom: 8px
+    & svg
+      min-width: 24px
+      width: 24px
+    & span
+      display: block
+      margin-bottom: 8px
+
+.contacts-form
+  @media (min-width: 991px)
+    padding: 30px 40px 0 40px
+    display: flex
+    gap: 75px
+    background: #000
+    border-radius: 32px
+    background: var(--bg-secondary)
+    box-shadow: $box-shadow-block
+    @media (min-width: 1280px)
+      padding: 30px 88px 0 70px
+  &__left
+    display: none
+    @media (min-width: 991px)
+      display: flex
+      align-items: flex-end
+    @media (min-width: 991px)
+      min-width: 360px
+    @media (min-width: 1490px)
+      min-width: 500px
+    & img
+      display: block
+    & p
+      margin-bottom: 0
+  &__right
+    width: 100%
+  & .title-banner
+    margin-bottom: 24px
+  & .btn
+    width: 100%
+    @media (min-width: 540px)
+      width: max-content
+      margin: 0!important
+    @media (min-width: 991px)
+      width: 327px
+
+#map
+  overflow: hidden
+  border-radius: 32px
+  box-shadow: $box-shadow-block

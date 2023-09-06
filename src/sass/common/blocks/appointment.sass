@@ -1,0 +1,89 @@
+.appointment
+  text-align: center
+  @media (min-width: 1280px)
+    text-align: left
+  & .btn
+    @media (min-width: 767px)
+      margin: 0 auto
+  &__row
+    overflow: hidden
+    border-radius: 32px
+    background: #FFF
+    box-shadow: $box-shadow-block
+    @media (min-width: 1280px)
+      display: flex
+      align-items: center
+      gap: 40px
+      padding-left: 40px
+    @media (min-width: 1490px)
+      padding-left: 115px
+      gap: 80px
+  &__left
+    padding: 24px 16px 0
+    @media (min-width: 767px)
+      max-width: 540px
+      margin: 0 auto
+    @media (min-width: 1280px)
+      max-width: 472px
+      padding: 40px 0
+    @media (min-width: 1490px)
+      padding: 48px 0
+  &__img
+    &--mob
+      margin-top: -10px
+      margin-left: auto
+      @media (min-width: 1280px)
+        display: none
+    &--desktop
+      display: none
+      @media (min-width: 1280px)
+        display: block
+  &__title
+    color: var(--primary)
+    font-size: 28px
+    font-weight: 700
+    line-height: 32px
+    margin-bottom: 16px
+    @media (min-width: 1490px)
+      font-size: 38px
+      line-height: 48px
+  &__subtitle
+    font-weight: 700
+    line-height: 24px
+    margin-bottom: 8px
+    @media (min-width: 1280px)
+      margin-bottom: 0
+  &__number
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 8px
+    color: var(--secondary)
+    font-weight: 700
+    line-height: 24px
+  &__call
+    margin-bottom: 24px
+    @media (min-width: 1280px)
+      display: flex
+      align-items: center
+      gap: 24px
+      margin-bottom: 20px
+    @media (min-width: 1490px)
+      margin-bottom: 42px
+  &__text
+    color: var(--gray-text)
+    font-size: 17px
+    line-height: 22px
+    margin-top: 16px
+    & a
+      color: var(--primary)
+
+.appointment-dark
+  & .appointment
+    &__row
+      background: #DAE9FF
+    &__title
+      color: var(--dark-blue-1)
+    &__text
+      color: var(--text)
+

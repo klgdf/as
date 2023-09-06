@@ -1,0 +1,47 @@
+.screen-17
+  &__item
+    +block-sh-1
+    padding: 16px
+    margin-bottom: 16px
+    @media (min-width: 991px)
+      margin-bottom: 0
+    &:last-child
+      margin-bottom: 0
+  &__year
+    color: var(--accent)
+    font-size: 17px
+    font-weight: 700
+    line-height: 22px
+    margin-bottom: 8px
+    @media (min-width: 991px)
+      font-size: 24px
+      font-weight: 400
+      line-height: 32px
+  &__row
+    @media (min-width: 991px)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 16px
+    @media (min-width: 1280px)
+      grid-template-columns: repeat(3, 1fr)
+      gap: 40px
+    @media (min-width: 1440px)
+      grid-template-columns: repeat(4, 1fr)
+  &__spec
+    @media (min-width: 991px)
+      line-height: 26px
+
+.screen-17, .screen-18
+  & .title-h2
+    margin-bottom: 24px
+  &__spec
+    color: var(--dark-blue-2)
+    font-size: 17px
+    line-height: 22px
+    @media (min-width: 991px)
+      font-size: 20px
+  &__name
+    color: var(--black-text)
+    font-size: 20px
+    line-height: 26px
+    margin-bottom: 4px

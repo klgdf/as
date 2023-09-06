@@ -1,0 +1,62 @@
+.screen-12
+  &.partners
+    & .screen-12__row
+      border-bottom: 0
+      padding-bottom: 0
+  &__row
+    border-bottom: 2px solid var(--border-line)
+    border-style: dashed
+    @media (min-width: 1280px)
+      display: flex
+      gap: 40px
+      padding-bottom: 40px
+  &__info
+    padding-top: 16px
+    @media (min-width: 991px)
+      display: flex
+      align-items: flex-start
+      gap: 48px
+  &__title
+    color: var(--primary)
+    font-size: 17px
+    font-weight: 700
+    line-height: 22px
+    text-transform: uppercase
+    margin-bottom: 4px
+  &__item
+    display: flex
+    align-items: flex-start
+    gap: 8px
+    margin-bottom: 8px
+    @media (min-width: 991px)
+      margin-bottom: 0
+    &:last-child
+      margin-bottom: 0
+  &__text
+    color: #484848
+    font-size: 17px
+    line-height: 22px
+  &__left
+    font-size: 17px
+    line-height: 22px
+    margin-bottom: 24px
+    @media (min-width: 1280px)
+      max-width: 694px
+      font-size: 20px
+      line-height: 26px
+      margin-bottom: 0
+    & p
+      &:last-child
+        margin-bottom: 0
+  &__right
+    margin-bottom: 24px
+    @media (min-width: 1280px)
+      margin-bottom: 0
+    & img
+      overflow: hidden
+      border-radius: 32px
+      border: 1px solid #FFF
+
+a.screen-12__text
+  color: var(--primary)
+  text-decoration-line: underline

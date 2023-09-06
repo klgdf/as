@@ -1,0 +1,21 @@
+.vacancy
+  &__row
+    display: flex
+    align-items: center
+    gap: 8px
+    margin-bottom: 16px
+    &:last-child
+      margin-bottom: 0
+  &__about
+    margin-bottom: 24px
+    @media (min-width: 991px)
+      margin-bottom: 40px
+  & .article
+    margin-bottom: 60px
+    @media (min-width: 991px)
+      margin-bottom: 100px
+
+.single-vacancies
+  & .section-bg
+    @media (max-width: 991px)
+      background: var(--bg-main)

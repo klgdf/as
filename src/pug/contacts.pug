@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+  include components/_head
+
+</head>
+<body>
+
+  .wrapper
+    .anchor#top
+
+    include components/_header
+    .section-bg
+      include components/_breadcrumbs
+    section.section-first.section-bg
+      include content/contacts/contacts-screen-1
+    section.section
+      include content/contacts/contacts-screen-2
+    section.section
+      include blocks/licenses
+    a.top(href="#top")
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6483 15.2484C17.4233 15.4734 17.1181 15.5998 16.7999 15.5998C16.4817 15.5998 16.1765 15.4734 15.9515 15.2484L11.9999 11.2968L8.0483 15.2484C7.82198 15.467 7.51886 15.588 7.20422 15.5852C6.88959 15.5825 6.58861 15.4563 6.36612 15.2338C6.14363 15.0113 6.01743 14.7103 6.01469 14.3957C6.01196 14.0811 6.13291 13.7779 6.3515 13.5516L11.1515 8.75161C11.3765 8.52665 11.6817 8.40027 11.9999 8.40027C12.3181 8.40027 12.6233 8.52665 12.8483 8.75161L17.6483 13.5516C17.8733 13.7766 17.9996 14.0818 17.9996 14.4C17.9996 14.7182 17.8733 15.0234 17.6483 15.2484Z" fill="#226ED8"/>
+      </svg>
+
+    include components/_footer
+    include components/_modals
+    include components/_scripts
+
+</body>
+</html>

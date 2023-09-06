@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+  include components/_head
+
+</head>
+<body>
+
+  .wrapper
+    .anchor#top
+
+    include components/_header
+    .section-bg
+      include components/_breadcrumbs
+    section.section-first.section-bg
+      include content/articles/cat-articles-screen-1
+    section.section
+      .container.df.fxww
+        - let count = 0;
+        while count < 5
+          include blocks/article-preview
+          - count += 1;
+
+
+    include components/_footer
+    include components/_modals
+    include components/_scripts
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+.btn
+  display: block
+  box-sizing: border-box
+  padding: 18px 32px
+  font-weight: 700
+  line-height: 24px
+  border-radius: 40px
+  text-align: center
+  transition: var(--ts)
+  cursor: pointer
+  &.small
+    width: 100%
+    @media (min-width: 767px)
+      width: max-content
+  &-primary
+    color: var(--bg-grayscale)
+    background: var(--primary)
+    padding: 8px 24px
+    @media (min-width: 991px)
+      padding: 14px 32px
+    &:hover, &:active
+      background: var(--dark-blue-1)
+    &:focus
+      outline: 8px solid #DAE9FF
+  &-secondary
+    color: var(--primary)
+    border: 2px solid var(--primary)
+    padding: 6px 24px
+    @media (min-width: 991px)
+      padding: 12px 32px
+    &:hover, &:active
+      border: 2px solid var(--dark-blue-1)
+      color: var(--dark-blue-1)
+
+.slider-btn
+  display: flex
+  align-items: center
+  width: max-content
+  border-radius: 40px
+  background: #FFF
+  box-shadow: 0px 0px 8px 0px rgba(24, 109, 228, 0.15)
+  &-prev, &-next
+    position: unset!important
+    margin-top: 0!important
+    width: auto!important
+    height: auto!important
+    color: var(--primary)!important
+    &::after
+      content: none!important
+    & svg
+      width: 24px
+      height: 24px
+      min-width: 24px
+    & svg path
+      fill: var(--primary)
+    &.swiper-button-disabled
+      opacity: 0.4!important
+  &-prev
+    padding: 10px 8px 10px 16px
+    & svg
+      transform: rotate(90deg)
+  &-next
+    padding: 10px 16px 10px 8px
+    & svg
+      transform: rotate(270deg)

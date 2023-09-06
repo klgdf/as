@@ -1,0 +1,46 @@
+/* BEGIN PADDING MARGIN GAP REM */
+$offset_global: 24px; // PADDING, MARGIN, GAP
+
+/* END PADDING MARGIN GAP REM */
+
+/* BEGIN COLORS */
+:root {
+  --primary: #186DE4;
+  --accent: #226ED8;
+  --secondary: #D91A3C;
+  --negative: #EE5151;
+  --possitive: #00966D;
+  --average: #FF902B;
+  --dark-blue-1: #084CAB;
+  --dark-blue-2: #336CC9;
+  --gray: #BDBDBD;
+  --grayscale: #4E4B66;
+  --gray-text: #A9AEBA;
+  --black-text: #000;
+  --bg-main: #FDFDFF;
+  --bg-secondary: #F6F9FF;
+  --bg-grayscale: #F7F7FC;
+  --text: #161515;
+  --white-content: #fff;
+  --active-breadcrumbs: #0047BB;
+  --inactive-breadcrumbs: #99B5E4;
+  --light-black: #373F41;
+  --warning: #CCDAF1;
+  --border-line: #D9DBE9;
+  --ts: 0.3s;
+}
+
+
+/* END COLORS */
+
+/* BEGIN FONTS */
+$font_primary: "Circe", serif;
+$font_secondary: 'Poppins', sans-serif;
+$font_third: 'Inter', sans-serif;
+
+$box-shadow: 0px 0px 8px 0px rgba(24, 109, 228, 0.15);
+$box-shadow-block: 0px 0px 12px 0px rgba(24, 109, 228, 0.15);
+
+/* END FONTS */
+
+$border-radius: 0.375rem;

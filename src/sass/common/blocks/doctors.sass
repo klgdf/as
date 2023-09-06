@@ -1,0 +1,49 @@
+.doctors
+  & .swiper-slide
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: auto!important
+  &__slider
+    & .btn-secondary
+      margin-bottom: 16px
+  &__name
+    color: var(--text)
+    font-size: 24px
+    line-height: 28px
+  &__spec
+    color: var(--primary)
+    font-size: 17px
+    line-height: 22px
+    padding: 8px 0
+  &__item
+    padding: 24px 16px
+    +block-sh-1
+    & .btn
+      width: 100%
+  &__point
+    position: relative
+    display: flex
+    gap: 4px
+    &::before
+      content: ''
+      display: block
+      width: 6px
+      min-width: 6px
+      height: 6px
+      background: var(--secondary)
+      border-radius: 50%
+      margin: 9px
+  &__photo
+    overflow: hidden
+    border-radius: 50%
+    max-width: 250px
+    max-height: 250px
+    width: 250px
+    height: 250px
+    margin: 0 auto 16px
+    & img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: top

@@ -1,0 +1,67 @@
+.screen-8
+  & .title-h2
+    margin-bottom: 24px
+  & .description
+    margin-bottom: 24px
+  &__row
+    padding: 16px
+    +block-sh-1
+    margin-bottom: 16px
+    @media (min-width: 1280px)
+      display: flex
+      align-items: center
+      gap: 40px
+    &:last-child
+      margin-bottom: 0
+    & .btn
+      width: 100%
+      @media (min-width: 540px)
+        width: max-content
+  &__head
+    display: flex
+    justify-content: space-between
+    gap: 8px
+    margin-bottom: 16px
+    @media (min-width: 1280px)
+      margin-bottom: 0
+  &__discount
+    color: var(--secondary)
+    text-align: center
+    padding: 7px 6px 5px 6px
+    border-radius: 40px
+    border: 2px solid var(--secondary)
+  &__price
+    display: flex
+    align-items: center
+    gap: 8px
+    font-weight: 700
+    line-height: 24px
+    @media (min-width: 1280px)
+      gap: 24px
+    &--mob
+      display: flex!important
+      @media (min-width: 1280px)
+        display: none!important
+    &--desktop
+      display: none!important
+      @media (min-width: 1280px)
+        display: flex!important
+        justify-content: flex-end
+        max-width: 240px
+        min-width: 240px
+  &__title
+    font-weight: 700
+    line-height: 24px
+    margin-bottom: 12px
+    @media (min-width: 1280px)
+      margin-bottom: 0
+      max-width: 264px
+      min-width: 264px
+  &__right
+    @media (min-width: 1280px)
+      display: none
+  &__content
+    @media (min-width: 1280px)
+      display: block
+      width: 100%
+      margin-bottom: 0

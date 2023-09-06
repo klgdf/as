@@ -1,0 +1,94 @@
+.screen-16
+  &__row
+    padding-bottom: 40px
+    border-bottom: 2px dashed var(--border-line)
+    @media (min-width: 1280px)
+      display: flex
+      gap: 60px
+      border-bottom: 0
+      padding-bottom: 0
+  & .tags
+    margin-top: 24px
+    @media (min-width: 1280px)
+      margin-top: 80px
+  &__point
+    display: flex
+    gap: 8px
+    padding: 8px 12px 8px 8px
+    +block-sh-1
+    @media (min-width: 540px)
+      box-shadow: none
+      border-radius: 0
+      padding: 0
+      background: transparent
+  &__info
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 8px
+    @media (min-width: 540px)
+      gap: 8px 40px
+    &--mob
+      margin: -76px 11px 0 8px
+      @media (min-width: 540px)
+        display: none
+    &--desktop
+      display: none
+      @media (min-width: 540px)
+        display: flex
+        margin-bottom: 24px
+  &__point
+    flex: 1 1 auto
+    @media (min-width: 540px)
+      flex: 0 1 auto
+  &__left
+    margin-bottom: 25px
+    @media (min-width: 991px)
+      max-width: 327px
+  &__right
+    & h1
+      font-weight: 400
+      margin-bottom: 24px
+      @media (min-width: 1280px)
+        margin-bottom: 16px
+  &__text
+    margin-bottom: 24px
+    & span
+      display: block
+      font-weight: 700
+      line-height: 24px
+      color: var(--primary)
+      margin-bottom: 8px
+  &__block
+    padding: 16px 24px
+    +block-sh-1
+    margin: 24px 0 0
+    @media (min-width: 991px)
+      display: flex
+      align-items: center
+      gap: 24px
+      width: max-content
+    @media (min-width: 1280px)
+      margin: 40px 0 0
+    & .btn
+      @media (min-width: 540px)
+        width: max-content
+      @media (min-width: 1280px)
+        min-width: 200px
+    & span
+      display: block
+      font-size: 24px
+      line-height: 28px
+      margin-bottom: 21px
+      @media (min-width: 991px)
+        margin-bottom: 0
+      @media (min-width: 1280px)
+        line-height: 32px
+        margin-right: 16px
+  &__price
+    margin-bottom: 24px
+    @media (min-width: 991px)
+      margin-bottom: 0
+  &__img
+    overflow: hidden
+    border-radius: 32px
