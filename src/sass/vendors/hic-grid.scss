@@ -1,0 +1,28 @@
+@mixin height-aspect-ratio($width, $height) {
+  .h_#{$width}-#{$height} {
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: calc(($height / $width) * 100%);
+    }
+  }
+}
+
+@mixin height-aspect-ratio-init {
+  @each $aspect-ratio-item in $height-aspect-ratio {
+    @each $key, $value in $aspect-ratio-item {
+      @if $key != 0 {
+        @include height-aspect-ratio($key, $value);
+      }
+    }
+  }
+}
+
+$height-aspect-ratio: (
+    1: 1,
+  ),
+  (
+    16: 9,
+  );
+@include height-aspect-ratio-init(); // .h_16-9
